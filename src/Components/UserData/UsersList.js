@@ -1,12 +1,13 @@
 import React from "react";
 import CardWrapper from "../UI/CardWrapper";
+import classes from './UsersList.module.css';
 
 const UsersList = (props) => {
   return (
-    <CardWrapper>
+    <CardWrapper className={classes.users}>
       <ul>
         {props.users.map((user) => (
-          <li>
+          <li key={user.id}>
             {user.name} ({user.age} years old)
           </li>
         ))}
